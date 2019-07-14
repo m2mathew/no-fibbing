@@ -1,0 +1,15 @@
+{
+  "name": "no-fibbing",
+  "version": "1.0.0",
+  "description": "A small app to find out if your number is in the Fibonacci sequence",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "math",
+    "JavaScript"
+  ],
+  "author": "Mike Mathew (@m2mathew)",
+  "license": "MIT"
+}

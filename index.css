@@ -71,7 +71,7 @@ header .title {
   display: block;
 }
 
-.container {
+.card {
   border-radius: 4px;
   border: 1px solid lightslategray;
   background: white;

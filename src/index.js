@@ -1,29 +1,32 @@
-// Function to check if a number is in the Fibonacci sequence
+document.addEventListener('DOMContentLoaded', () => {
+  // document ready
+  const attempts = [];
+  let count = 0;
 
-// We start the sequence with the first two numbers preset
-const set = [0, 1];
+  // Get elements needed
+  const form = document.querySelector('form');
+  const input = document.querySelector('input');
+  const list = document.querySelector('ul');
 
-export default function fibChecker(number) {
-  // exit early if the user puts in 0, empty value, or negative value
-  if (!number || number < 0) {
-    return false;
+  // Add event listeners
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('submit button clicked');
 
-    // exit early if the user puts in 1 or 2
-    //  since we already have those preset in our sequence
-  } else if (set.includes(number)) {
-    return true;
-  }
 
-  for (let i = 2; i <= number; i += set[0]) {
-    if (i % (set[0] + set[1]) === 0) {
-      set[0] = set[1];
-      set[1] = i;
-    }
-  }
+    
+    // Add value to attempts list
+    attempts.push({ value: input.value });
 
-  if (set.includes(number)) {
-    return true;
-  }
 
-  return false;
-}
+    input.value = '';
+    console.log('attemps', attempts);
+
+    // Add to list in the DOM
+    list.innerHTML += attempts[count]
+    count += 1;
+  });
+
+  console.log('attemps', attempts);
+
+});

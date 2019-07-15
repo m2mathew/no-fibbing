@@ -10,3 +10,67 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Marko One', serif;
 }
+
+header {
+  background: linear-gradient(#9090E8 10%, 40%, #ABC1FF 90%);
+  padding: 16px 32px;
+}
+
+.main {
+  background: #f5f5f5;
+  padding: 32px;
+  min-height: 90vh;
+}
+
+.main form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.main form label input, .main form button {
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 80px;
+  border: 3px solid lavender;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.main form label input:focus {
+  border: 3px solid pink;
+}
+
+.main form button {
+  background: lavenderblush;
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 120px;
+  border: 3px solid pink;
+  font-size: 18px;
+  margin: 16px 0 16px 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.list-container {
+  border-radius: 4px;
+  border: 1px solid lightslategray;
+  background: white;
+  width: 40%;
+  padding: 24px;
+}
+
+.list-container .attempt-list {
+  list-style: none;
+}

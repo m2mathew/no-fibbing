@@ -1,4 +1,4 @@
-import fibChecker from './';
+import fibChecker from '..';
 
 describe('fibChecker', () => {
   test('return false if 0', () => {

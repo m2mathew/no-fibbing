@@ -11,22 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add event listeners
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('submit button clicked');
+    const currentValue = parseInt(input.value);
 
-
+    const result = fibChecker(currentValue)
     
     // Add value to attempts list
-    attempts.push({ value: input.value });
-
+    attempts.push({
+      result,
+      value: currentValue,
+    });
 
     input.value = '';
     console.log('attemps', attempts);
 
     // Add to list in the DOM
-    list.innerHTML += attempts[count]
+    list.innerHTML += `<li>${attempts[count].value} — ${attempts[count].result}</li>`;
     count += 1;
   });
-
-  console.log('attemps', attempts);
 
 });
